@@ -35,6 +35,10 @@ fun main() {
         println(s)
     }
 
+    for (item in list1.withIndex()) {
+        println("${item.index}: ${item.value}")
+    }
+
     for ((index, value) in list1.withIndex()) {
         println("$index: $value")
     }

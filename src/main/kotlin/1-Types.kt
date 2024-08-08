@@ -56,7 +56,7 @@ private fun arrays() {
 
     // Arrays:
     val arrayOfInts = intArrayOf(1, 2, 3)
-    val asc = Array(5) { i -> (i * i).toString() }
+    val asc: Array<String> = Array(5) { i -> (i * i).toString() }
 
     // Arrays de tipos primitivos:
     val arr1: IntArray = intArrayOf(1, 2, 3)

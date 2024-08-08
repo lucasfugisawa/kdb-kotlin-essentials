@@ -1,14 +1,32 @@
+enum class SensacaoTermica {
+    MUITO_FRIO,
+    FRIO,
+    NORMAL,
+    QUENTE,
+    MUITO_QUENTE,
+}
+
 fun main() {
 
     // when:
-    val temperature = -5
+    val temperature = -2
     val reaction = when {
         temperature > 55 -> "It's too hot!"
         temperature < 40 -> "It's too cold!"
         temperature < 0 -> "It's frigid!"
-        else -> "It's just right!"
+        else -> "It's too bright!"
     }
     println(reaction)
+
+    var sensacaoTermica = SensacaoTermica.MUITO_QUENTE
+
+    val mensagem = when(sensacaoTermica) {
+        SensacaoTermica.MUITO_FRIO -> "Frio demais!"
+        SensacaoTermica.FRIO -> "Frio!"
+        SensacaoTermica.QUENTE -> "Quete demais!"
+        SensacaoTermica.NORMAL -> "Normal"
+        SensacaoTermica.MUITO_QUENTE -> "Quete demais!"
+    }
 
     // if:
     val a = 1

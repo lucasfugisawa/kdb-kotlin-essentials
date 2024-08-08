@@ -11,7 +11,18 @@ fun main() {
 
     fun circumference3(radius: Double) = 2 * PI * radius
 
-    val circumference4 = { radius: Double -> 2 * PI * radius }
+    val circumference4 = { radius: Double ->
+        // ...
+        2 * PI * radius
+    }
+
+
+    val myLambda = { texto: String, numero: Int ->
+        // ..
+        if (numero == 0) texto
+        else "texto: $numero"
+    }
+
 
     // Chamando funções:
     val perimeter1 = circumference1(1.0)
@@ -24,13 +35,40 @@ fun main() {
     println(perimeter3)
 
     // Função como último argumento:
-    fun fazAlgoComString(str: String, algo: (String)->Unit): Unit {
+    fun fazAlgoComString(str: String, algo: (String) -> Unit): Unit {
         algo(str)
     }
 
     var minhaString = "Lucas"
 
-    fazAlgoComString(minhaString, { nome -> println(nome) }) // Função dentro do ()
+    fun imprimeNaTela(texto: String) = println(texto)
 
-    fazAlgoComString(minhaString) { nome -> println(nome) } // Função fora do ()
+    fazAlgoComString("text", ::imprimeNaTela)
+
+    fazAlgoComString("text") { nome ->
+        // ...
+        // ...
+        println(nome)
+    }
+
+    fazAlgoComString("text") {
+        println(it)
+        println(it)
+        println(it)
+        println(it)
+    } // Função lambda fora dos ()
+
+    fazAlgoComString("text") { println(it) } // Função fora do ()
+}
+
+fun greet(name: String, greeting: String? = "Welcome"): String {
+    return if (greeting != null) {
+        "$greeting, $name!"
+    } else {
+        return name
+    }
+}
+
+fun namedParameterDefaultArgs() {
+    val mensagem = greet(name = "Lucas")
 }
