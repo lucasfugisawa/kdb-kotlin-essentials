@@ -44,7 +44,7 @@ fun main() {
     // returns the result of the lambda
     // -> executing a lambda on non-null objects
     // -> introducing an expression as a variable in local scope
-    var resLet = address?.let {
+    var resLet = address.let {
         it.street1 = "9801 Maple Ave"
         it.street2 = "Apartment 255"
         it.city = "Rocksteady"
@@ -74,14 +74,4 @@ fun main() {
         postalCode = "12345"
         println(this)
     }
-
-    // takeIf / takeUnless:
-    println("takeIf / takeUnless")
-
-    var resTakeIf = address.takeIf { it.state == "IN" }
-    println(resTakeIf)
-
-    var takeUnless = address.takeUnless { it.state == "IN" }
-    println(takeUnless)
-
 }

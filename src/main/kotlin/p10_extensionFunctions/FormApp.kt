@@ -8,4 +8,10 @@ fun main() {
     val phoneNumberValido = "16 91234-5678".isPhoneNumber()
     println(phoneNumberValido)
 
+    "asdasd".isNotNullDoMeuJeito()
+    1.isNotNullDoMeuJeito()
+
+    val qualquer: Int? = null
+    qualquer.isNotNullDoMeuJeito()
+
 }
