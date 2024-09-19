@@ -16,12 +16,12 @@ fun main() {
 
 }
 
-var nome = "Lucas"
-    get() = "$field."
-    set(value: String) {
-        if (value.isBlank()) throw IllegalArgumentException()
-        field = value
-    }
+//var nome = "Lucas"
+//    get() = "$field."
+//    set(value: String) {
+//        if (value.isBlank()) throw IllegalArgumentException()
+//        field = value
+//    }
 
 val obj : Any? = null
 
